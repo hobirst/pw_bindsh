@@ -3,7 +3,7 @@
 
 #include "sock.h"
 #include "check.h"
-#include "background.h"
+#include "daemon.h"
 #include "debug.h"
 
 int main(int argc, char **argv) {
@@ -36,7 +36,7 @@ int main(int argc, char **argv) {
     if(udp_port == 0 || tcp_port == 0) return 1;
 
     if(background) {
-        pid_t pid = background_task();
+        pid_t pid = daemon_init();
         if(pid < 0) return pid;
     }
 
