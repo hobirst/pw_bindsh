@@ -4,9 +4,9 @@ POC for a password protected bindshell.
 
 ## Usage
 
--t      TCP port, on which the bindshell listens
--u      UDP port, for filtering UDP packets on raw socket or bind UDP socket to, when `cap_net_raw` is not effective or `EUID != 0`
--b      Background / daemon task
+-t      TCP port, on which the bindshell listens <br>
+-u      UDP port, for filtering UDP packets on raw socket or bind UDP socket to, when `cap_net_raw` is not effective or `EUID != 0` <br>
+-b      Background / daemon task <br>
 
 ## Build
 
