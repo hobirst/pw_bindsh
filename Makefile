@@ -1,8 +1,12 @@
-sources = main.c background.c check.c sha256.c sock.c
+sources = main.c daemon.c check.c sha256.c sock.c
+outdir = build
 
-release:
-	gcc $(sources) -o build/pw_bindsh
+.prep:
+	mkdir -p $(outdir)
 
-debug:
-	gcc -D_DEBUG -ggdb $(sources) -o build/pw_bindsh_dbg
+release: .prep
+	gcc $(sources) -o $(outdir)/pw_bindsh
+
+debug: .prep
+	gcc -D_DEBUG -ggdb $(sources) -o $(outdir)/pw_bindsh_dbg
 
